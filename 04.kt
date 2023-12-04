@@ -11,7 +11,6 @@ fun main() {
         val dicePairs: List<Pair<Int, String>> = mutableListOf<Pair<Int, String>>()
         for(p : String in diceArr){
             val pair = p.split(" ")
-
             dicePairs.addLast(Pair(pair[1].trim().toInt(), pair[2].trim()))
         }
         //fuck it, radix sort
