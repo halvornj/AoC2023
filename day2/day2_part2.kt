@@ -1,3 +1,4 @@
+package day2
 import java.io.FileReader
 
 fun main() {
@@ -8,10 +9,10 @@ fun main() {
         var dice = it.slice(IntRange(it.indexOf(':')+1, it.length-1))
         dice = dice.replace(';', ',')
         val diceArr = dice.split(',')
-        val dicePairs: List<Pair<Int, String>> = mutableListOf<Pair<Int, String>>()
+        val dicePairs: MutableList<Pair<Int, String>> = mutableListOf()
         for(p : String in diceArr){
             val pair = p.split(" ")
-            dicePairs.addLast(Pair(pair[1].trim().toInt(), pair[2].trim()))
+            dicePairs.add(Pair(pair[1].trim().toInt(), pair[2].trim()))
         }
         //fuck it, radix sort
         val buckets = arrayOf(mutableListOf<Pair<Int, String>>(),mutableListOf<Pair<Int, String>>(),mutableListOf<Pair<Int, String>>())

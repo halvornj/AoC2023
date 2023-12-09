@@ -33,7 +33,7 @@ fun main() {
         val line = it.split(" ").map{s->s.toLong()}
         map[Pair(line[0], line[1])] = line[2]
     }
-    maps.addLast(map)
+    maps.add(map)
     maps.removeFirst()
 
     //what if we go backward? eh?

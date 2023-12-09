@@ -5,11 +5,11 @@ fun main() {
     var sum = 0
 
     val matrix = mutableListOf<String>()
+    matrix.add(".".repeat(matrix[0].length))
     reader.forEachLine {
-        matrix.addLast(".$it.")
+        matrix.add(".$it.")
     }
-    matrix.addFirst(".".repeat(matrix[0].length))
-    matrix.addLast((".").repeat(matrix[0].length))
+    matrix.add((".").repeat(matrix[0].length))
     val regexNums = Regex("^[0-9]")
 
     for(i in 0..matrix.size-1){
